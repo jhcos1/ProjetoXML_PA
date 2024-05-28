@@ -42,10 +42,10 @@ Sometimes we need to create a file from scratch.
 In this case, we can use the simplified way of creating the XML document.  
 Here is an example:  
 
-``  
-    val myXML = Document("SampleTag")
-    val mainTag = myXML.documentRoot
-
+    ``  
+    val myXML = Document("SampleTag")  
+    val mainTag = myXML.documentRoot  
+    
     val doc = mainTag.addTag {
         addTag("curso", "Mestrado em Engenharia de Informática" )
         addTag("fuc") {
@@ -69,7 +69,7 @@ Here is an example:
             }
         }
     }
-
+    
     println( myXML.prettyPrintXML() )  
-``  
+    ``  
 

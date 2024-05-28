@@ -42,10 +42,9 @@ Sometimes we need to create a file from scratch.
 In this case, we can use the simplified way of creating the XML document.  
 Here is an example:  
 
-    
+       
     val myXML = Document("SampleTag")  
     val mainTag = myXML.documentRoot  
-    
     val doc = mainTag.addTag {
         addTag("curso", "Mestrado em Engenharia de Informática" )
         addTag("fuc") {
@@ -79,13 +78,13 @@ Here is an example:
 
 The Class Document creates a new document with the main Tag.  
 If Tag name is not mentioned, assumes "documentRoot" as is name. Also adds the "version" and "encoding" attributes with default values.  
-
-  fun docSample() {
-      val myXML = Document("empty")
-      val mainTag = myXML.documentRoot
-   
-      println( myXML.prettyPrintXML() )              // XML Formated Document
-  }  
+    
+      fun docSample() {
+          val myXML = Document("empty")
+          val mainTag = myXML.documentRoot
+       
+          println( myXML.prettyPrintXML() )              // XML Formated Document
+      }  
   
 ##### *General*  
 **rootTagName**: name for the main Tag. If the name is not identified, it defaults to "documentRoot"  
@@ -117,15 +116,15 @@ The Class Tag manages Tags and its attributes.
 To create a Document with main Tag class, please use Document class.  
 
 
-  fun tagSample() {
-      val myXML = Document("SampleTag")
-      val mainTag = myXML.documentRoot
-  
-      mainTag.addAttribute("content", "students")
-      mainTag.addTag("student", "XPTO")
-  
-      println( myXML.prettyPrintXML() )              // XML Formated Document
-  }  
+    fun tagSample() {
+        val myXML = Document("SampleTag")
+        val mainTag = myXML.documentRoot
+      
+        mainTag.addAttribute("content", "students")
+        mainTag.addTag("student", "XPTO")
+      
+        println( myXML.prettyPrintXML() )  
+    }  
 
   ##### *General*  
     

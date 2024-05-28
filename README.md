@@ -1,7 +1,7 @@
 # XML Package
 
 ## Programação Avançada
-### Joaquim H. Carvalho (Aluno 97044)
+#### Joaquim H. Carvalho (Aluno 97044)
 
 It aims to be a library for generating and manipulating XML in Kotlin, covering the essential elements:  
 - **Document**: is the main container.  
@@ -10,7 +10,7 @@ It aims to be a library for generating and manipulating XML in Kotlin, covering 
 - **Nested Tags**: Tags can be nested in a tree structure. **There can only be one Tag at the root**.
 - **Attributes**: Attributes can be part of the Document or Tags
 
-#### Usage
+### Usage
 
 Using this library starts with creating an empty document.  
   
@@ -31,12 +31,12 @@ Finaly, to see the results:
 
   ``println( myXML.prettyPrintXML() )``  
 
-#### Samples
+### Samples
 
 There are some samples in the inline documentation.
 These samples are available in the [Samples.kt](https://github.com/jhcos1/ProjetoXML_PA/blob/master/src/main/kotlin/XML/Samples.kt) file.
   
-#### DSL  
+### DSL  
 
 Sometimes we need to create a file from scratch.  
 In this case, we can use the simplified way of creating the XML document.  

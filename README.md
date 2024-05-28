@@ -31,5 +31,9 @@ Finaly, to see the results:
 
   ``println( myXML.prettyPrintXML() )``  
 
+#### Samples
+
+There are some samples in the inline documentation.
+These samples are available in the [Samples.kt](https://github.com/jhcos1/ProjetoXML_PA/blob/master/src/main/kotlin/XML/Samples.kt) file.
   
     

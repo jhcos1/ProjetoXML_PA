@@ -80,6 +80,13 @@ Here is an example:
 The Class Document creates a new document with the main Tag.  
 If Tag name is not mentioned, assumes "documentRoot" as is name. Also adds the "version" and "encoding" attributes with default values.  
 
+  fun docSample() {
+      val myXML = Document("empty")
+      val mainTag = myXML.documentRoot
+   
+      println( myXML.prettyPrintXML() )              // XML Formated Document
+  }  
+  
 ##### *General*  
 **rootTagName**: name for the main Tag. If the name is not identified, it defaults to "documentRoot"  
 **documentRoot**: name of the document's main Tag  
@@ -109,10 +116,19 @@ If Tag name is not mentioned, assumes "documentRoot" as is name. Also adds the "
 The Class Tag manages Tags and its attributes.  
 To create a Document with main Tag class, please use Document class.  
 
-##### *General* 
- * @constructor Creates a new Tag
- *              If current Tag has any value, it cannot contain another Tags
- 
+
+  fun tagSample() {
+      val myXML = Document("SampleTag")
+      val mainTag = myXML.documentRoot
+  
+      mainTag.addAttribute("content", "students")
+      mainTag.addTag("student", "XPTO")
+  
+      println( myXML.prettyPrintXML() )              // XML Formated Document
+  }  
+
+  ##### *General*  
+    
  **parent**: the parent of the Tag. It will be Document if the Tag is the root Tag  
  **name**: name for the Tag  
  **value**: Optional. The value for the Tag, if it has one.  

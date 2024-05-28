@@ -36,4 +36,40 @@ Finaly, to see the results:
 There are some samples in the inline documentation.
 These samples are available in the [Samples.kt](https://github.com/jhcos1/ProjetoXML_PA/blob/master/src/main/kotlin/XML/Samples.kt) file.
   
-    
+#### DSL  
+
+Sometimes we need to create a file from scratch.  
+In this case, we can use the simplified way of creating the XML document.  
+Here is an example:  
+
+``  
+    val myXML = Document("SampleTag")
+    val mainTag = myXML.documentRoot
+
+    val doc = mainTag.addTag {
+        addTag("curso", "Mestrado em Engenharia de Informática" )
+        addTag("fuc") {
+            addAttribute("codigo", "03782")
+            addAttribute("teste", 33)
+            addTag("nome","Dissertação")
+            addTag("ects",42.0)
+            addTag("avaliacao") {
+                addTag("componente") {
+                    addAttribute("nome", "Dissertação")
+                    addAttribute("peso","60%")
+                }
+                addTag("componente") {
+                    addAttribute("nome", "Apresentação")
+                    addAttribute("peso","20%")
+                }
+                addTag("componente") {
+                    addAttribute("nome", "Discussão")
+                    addAttribute("peso","20%")
+                }
+            }
+        }
+    }
+
+    println( myXML.prettyPrintXML() )  
+``  
+

@@ -42,7 +42,7 @@ Sometimes we need to create a file from scratch.
 In this case, we can use the simplified way of creating the XML document.  
 Here is an example:  
 
-    ``  
+    
     val myXML = Document("SampleTag")  
     val mainTag = myXML.documentRoot  
     
@@ -71,5 +71,38 @@ Here is an example:
     }
     
     println( myXML.prettyPrintXML() )  
-    ``  
+    
 
+### Reference
+  
+#### Document properties and methods  
+
+The Class Document creates a new document with the main Tag.  
+If Tag name is not mentioned, assumes "documentRoot" as is name. Also adds the "version" and "encoding" attributes with default values.  
+
+##### *General*  
+**rootTagName**: name for the main Tag. If the name is not identified, it defaults to "documentRoot"  
+**documentRoot**: name of the document's main Tag  
+**size**: number of Tags in the document. Can also be obtained through the fullSize property of the main class  
+**maxDepth**: maximal depth for the Tags in the document  
+**search**: searches into the document for the given pattern  
+**prettyPrintXML**: returns a string with the document in XML format  
+**saveToFile**: Save the XML formated document to a file   
+  
+##### *Tag methods*  
+**changeRootTagName**: Allows changing the name of the document's main Tag  
+**changeAllTagsNamed**: Changes the name of all Tag's with a specific name in the document to a new name  
+**deleteAllTagsNamed** Deletes all Tag's with a specific name   
+##### *Attribute methods*  
+**addAttribute**: Adds an attribute to the Document if it does not exist  
+**addAttributeOnAllTagsNamed**: Adds an attribute in all Tag's with a specific name in the document  
+**getAllAttributes**: Returns a list with the names of all attributes  
+**getAttributeValue**: Returns the value of an attribute  
+**changeAttributeValue**: Changes the value of an attribute  
+**changeAttributeName**: Changes the name of an attribute  
+**changeAllAttributesNamed**: Changes the name of all attributes in the document with a specific name to a new name  
+**deleteAttribute**: Deletes an attribute identified by name if it exists  
+**deleteAttributeOnAllTagsNamed**: Deletes an attribute identified by is name in all Tag's with a specific name  
+
+#### Tag properties and methods  
+  

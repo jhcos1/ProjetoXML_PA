@@ -73,9 +73,9 @@ Here is an example:
     println( myXML.prettyPrintXML() )  
     
 
-### Reference
+## Reference
   
-#### Document properties and methods  
+### Document properties and methods  
 
 The Class Document creates a new document with the main Tag.  
 If Tag name is not mentioned, assumes "documentRoot" as is name. Also adds the "version" and "encoding" attributes with default values.  
@@ -104,5 +104,47 @@ If Tag name is not mentioned, assumes "documentRoot" as is name. Also adds the "
 **deleteAttribute**: Deletes an attribute identified by name if it exists  
 **deleteAttributeOnAllTagsNamed**: Deletes an attribute identified by is name in all Tag's with a specific name  
 
-#### Tag properties and methods  
+### Tag properties and methods  
+  
+The Class Tag manages Tags and its attributes.  
+To create a Document with main Tag class, please use Document class.  
+
+##### *General* 
+ * @constructor Creates a new Tag
+ *              If current Tag has any value, it cannot contain another Tags
+ 
+ **parent**: the parent of the Tag. It will be Document if the Tag is the root Tag  
+ **name**: name for the Tag  
+ **value**: Optional. The value for the Tag, if it has one.  
+    
+ **children**: the children container  
+ **size**: number of Tags in the children container  
+ **fullSize**: number off all Tags in the container, including the children Tags  
+ **depth**: the level the Tag is at, taking into account that the main Tag is at level 1  
+ **maxDepth**: the maximal depth for the Tag  
+ **path**: the full path from the Root Tag  
+ **hasChildren**: returns true if current Tag has children Tags, otherwise false  
+ **hasAttributes**: returns true if current Tag has attributes, otherwise false  
+ **prettyPrintXML**: generates the XML formatted string  
+  
+##### *Tag methods*  
+    
+ **addTag**: add a Tag to the children Tag container  
+ **changeTagName**: changes the Tag's name  
+ **changeAllTagsNamed**: changes the name of all Tags that have the given name  
+ **delete**: deletes itself. The Tag will only be deleted if it does not contain other Tags, or if the force parameter is activated  
+ **deleteTag**: deletes a Tag in the child container. The Tag will only be deleted if it does not contain other Tags, or if the force parameter is activated  
+ **deleteAllTagsNamed**: deletes all the Tags with the given name. The Tag will only be deleted if it does not contain other Tags, or if the force parameter is activated  
+  
+##### *Attribute methods*  
+     
+**addAttribute**: adds an attribute to the Tag only if it doesn't exist  
+**addAttributeOnAllTagsNamed**: adds an attribute on all Tag's that have the given name  
+**getAllAttributes**: returns the List with the name of all attributes  
+**getAttributeValue**: return the value of an attribute  
+**changeAttributeValue**: changes the attribute value  
+**changeAttributeName**: changes the attribute name  
+**changeAllAttributesNamed**: changes the name of all attributes that have the given name  
+**deleteAttribute**: deletes an attribute by name, if it exists  
+**deleteAttributeOnAllTagsNamed**: deletes an attribute by is name on all Tag's that have the given name  
   

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plano programa="alterado" encoding="teste">
+	<curso>Mestrado em Engenharia de Informática</curso>
+	<uc cod="M4310">
+		<Tag_1.2.1>
+			<teste>Isto é um teste</teste>
+			<teste>Outro conteudo de teste</teste>
+		</Tag_1.2.1>
+		<Tag_1.2.2>Não pode ter filhos...</Tag_1.2.2>
+	</uc>
+	<uc cod="03782" />
+</plano>
+

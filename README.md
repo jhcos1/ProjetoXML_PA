@@ -113,6 +113,7 @@ If Tag name is not mentioned, assumes "documentRoot" as is name. Also adds the "
 ### Tag properties and methods  
   
 The Class Tag manages Tags and its attributes.  
+**It is not possible to create a Tag without is parent**. Therefore, to create the first Tag, whose parent is Document, we must create it first.  
 To create a Document with main Tag class, please use Document class.  
 
 

@@ -142,6 +142,7 @@ To create a Document with main Tag class, please use Document class.
  **hasChildren**: returns true if current Tag has children Tags, otherwise false  
  **hasAttributes**: returns true if current Tag has attributes, otherwise false  
  **prettyPrintXML**: generates the XML formatted string  
+ **translate**: creates XML Tags from a generic Class. Uses @XmlAttribute before element to declare that it is an attribute. Uses @XmlExclude to ignore that element.
   
 ##### *Tag methods*  
     
